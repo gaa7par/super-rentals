@@ -4,6 +4,9 @@
 
   <p>Have a good time!</p>
 
+  {{filter-listing filteredList=filteredList
+    autoComplete=(action 'autoComplete') search=(action 'search')}}
+
   {{#each model as |rentalUnit|}}
     {{rental-listing rental=rentalUnit}}
   {{/each}}

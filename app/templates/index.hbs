@@ -1,8 +1,16 @@
 {{outlet}}
 
-<h2>Welcome to Super Rentals</h2>
+<h1>Welcome to Super Rentals</h1>
 
   <p>Have a good time!</p>
+
+  {{#each model as |rental|}}
+    <h2>{{rental.title}}</h2>
+    <p>Owner: {{rental.owner}}</p>
+    <p>Type: {{rental.type}}</p>
+    <p>Location: {{rental.city}}</p>
+    <p>Number of bedrooms: {{rental.bedrooms}}</p>
+  {{/each}}
 
   {{#link-to "about"}}About{{/link-to}}
   {{#link-to "contact"}}Contact{{/link-to}}
